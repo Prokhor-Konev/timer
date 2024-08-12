@@ -4,14 +4,6 @@ const RECONNECTION_DELAY_MIN = 1000;
 const RECONNECTION_DELAY_MAX = 5000;
 
 if (donationAlertsToken !== "") {
-    // this.centrifugeClient = new Centrifuge(DA_CENTRIFUGE_URL, {
-    //     subscribeEndpoint: DA_SUBSCRIBE_URL,
-    //     subscribeHeaders: {
-    //         Authorization: `Bearer ${accessToken}`
-    //     },
-    //     minRetry: RECONNECTION_DELAY_MIN,
-    //     maxRetry: RECONNECTION_DELAY_MAX,
-    // });
     const config = {
         socket: 'wss://socket.donationalerts.ru',
         socketPort: '443',
@@ -23,7 +15,8 @@ if (donationAlertsToken !== "") {
     donationalerts.on("donation", (donate) => {
         donate = JSON.parse(donate);
         const { amount_main, alert_type } = donate;
-        if (alert_type !== '1') return; 
-        addTime(endingTime, amount_main * secondsAddedPerCurrency)
+        if (alert_type == '1') {
+            addTime(endingTime, amount_main * secondsAddedPerCurrency)
+        }
     });
 }

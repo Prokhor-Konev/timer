@@ -57,7 +57,6 @@ const addTime = async (time, s) => {
     endingTime = timeFunc.addSeconds(time, s);
     let addedTime = document.createElement("p");
     addedTime.classList = "addedTime";
-    // addedTime.innerText = `${JSON.stringify(donation)}`
     addedTime.innerText = `${s > 0 ? '+' : ''}${s}s`;
     document.body.appendChild(addedTime);
     addedTime.style.display = "block";
