@@ -22,9 +22,8 @@ if (donationAlertsToken !== "") {
     donationalerts.emit('add-user', { token: donationAlertsToken, type: config.type });
     donationalerts.on("donation", (donate) => {
         donate = JSON.parse(donate);
-        console.log(donate);
-        const { amount_main } = donate;
-
+        const { amount_main, alert_type } = donate;
+        if (alert_type !== '1') return; 
         addTime(endingTime, amount_main * secondsAddedPerCurrency)
     });
 }
