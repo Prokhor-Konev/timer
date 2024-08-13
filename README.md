@@ -1,4 +1,4 @@
-<h1 align="center" style="color: #f01e2c">Timer for Niki</h1>
+<h1 align="center" style="color: #f01e2c">Timer for NikiWright</h1>
 
 Hotkeys
 
