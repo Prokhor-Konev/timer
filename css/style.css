@@ -68,7 +68,7 @@ canvas {
     opacity: 0;
     display: none;
     z-index: 100;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 3.25rem;
     color: #fff;
     transition: top 1s ease-out, opacity .5s ease-out;
