@@ -12,7 +12,7 @@ body {
 
 
 :root {
-    --background-color: rgba(29, 28, 26, 0.8);
+    --background-color: rgb(45, 45, 44);
     --text-color: #fff;
     --icon-color: #424850;
 }
@@ -70,6 +70,6 @@ canvas {
     z-index: 100;
     font-weight: 400;
     font-size: 3.25rem;
-    color: rgba(240, 30, 44, 0.5);
+    color: #fff;
     transition: top 1s ease-out, opacity .5s ease-out;
 }
