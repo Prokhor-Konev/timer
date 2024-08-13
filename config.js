@@ -3,7 +3,7 @@ var twitch_channel_name = ""
 var streamlabs_token = ""
 var streamelements_token = ""
 var streamloots_token = ""
-var donationAlertsToken = "bZM80Ng0dcqRFy6bdQ0R"
+var donationAlertsToken = ""
 
 // Initial Counter Config
 var initialHours = 5
