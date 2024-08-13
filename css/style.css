@@ -1,7 +1,7 @@
 body, body * {
     padding: 0;
     margin: 0;
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Nunito', sans-serif;
 }
 
 body {
@@ -12,9 +12,8 @@ body {
 
 
 :root {
-    --background-color: #f7fff7;
-    --shadow-color: #00000020;
-    --text-color: #292f36;
+    --background-color: rgba(29, 28, 26, 0.8);
+    --text-color: #fff;
     --icon-color: #424850;
 }
 
@@ -26,10 +25,9 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--background-color);
-    box-shadow: 0 0 1.25rem 0.5rem var(--shadow-color);
-    width: 500px;
-    height: 180px;
-    border-radius: 30px;
+    width: 486px;
+    height: 128px;
+    border-radius: 32px;
 }
 
 #textDiv {
@@ -62,8 +60,6 @@ canvas {
     z-index: 2;
 }
 
-
-
 .addedTime {
     position: absolute;
     top: 50%;
@@ -71,19 +67,9 @@ canvas {
     transform: translate(-50%, -50%);
     opacity: 0;
     display: none;
-    z-index: 5;
+    z-index: 100;
     font-weight: 400;
     font-size: 3.25rem;
-    color: var(--background-color);
-    text-shadow: 0 0 1.5rem var(--text-color);
+    color: rgba(240, 30, 44, 0.5);
     transition: top 1s ease-out, opacity .5s ease-out;
-}
-
-#pauseIcon {
-    position: absolute;
-    top: 75%;
-    border-left:10px solid var(--icon-color);
-    border-right:10px solid var(--icon-color);
-    width: 8px;
-    height: 30px;
 }

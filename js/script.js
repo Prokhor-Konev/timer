@@ -57,12 +57,12 @@ const addTime = async (time, s) => {
     endingTime = timeFunc.addSeconds(time, s);
     let addedTime = document.createElement("p");
     addedTime.classList = "addedTime";
-    addedTime.innerText = `${s > 0 ? '+' : ''}${s}s`;
+    addedTime.innerText = `${s > 0 ? '+' : ''}${s.toString().split('.')[0]}${s.toString().split('.')[1] ? '.' + s.toString().split('.')[1].slice(0, 3) : ''}s`;
     document.body.appendChild(addedTime);
     addedTime.style.display = "block";
     await sleep(50);
     addedTime.style.left = `${randomInRange(35, 65)}%`;
-    addedTime.style.top = `${randomInRange(15, 40)}%`;
+    addedTime.style.top = `${randomInRange(15, 60)}%`;
     addedTime.style.opacity = "1";
     await sleep(2500);
     addedTime.style.opacity = "0";
@@ -70,12 +70,10 @@ const addTime = async (time, s) => {
     addedTime.remove();
 };
 
-
-
 const testAddTime = (times, delay) => {
     let addTimeInterval = setInterval(async () => {
         if (times > 0) {
-            await sleep(randomInRange(50, delay-50));
+            await sleep(randomInRange(50, delay - 50));
             addTime(endingTime, 30);
             --times;
         }
@@ -85,26 +83,28 @@ const testAddTime = (times, delay) => {
     }, delay);
 };
 
-console.log('log');
-
 document.addEventListener("keydown", (e) => {
-    // console.log(e);
     switch (e.code) {
         case "ArrowUp":
-            addTime(endingTime, timeIncrease);
-            console.log('key up');
-            return;
+            if (e.shiftKey) {
+                addTime(endingTime, timeIncrease);
+                return;
+            }
+            addTime(endingTime, timeMinuteIncDec)
+            return
         case "ArrowDown":
-            addTime(endingTime, -timeDecrease);
-            return;
+            if (e.shiftKey) {
+                addTime(endingTime, -timeDecrease);
+                return;
+            }
+            addTime(endingTime, -timeMinuteIncDec)
+            return
         case "KeyR":
             resetTime();
             return;
         case "Space":
             prevPauseDate = isPause ? null : new Date(Date.now());
-            pauseIconElement.style.display = isPause ? "none" : "block";
             isPause = !isPause;
-
             return;
     }
 })

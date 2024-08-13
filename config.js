@@ -3,7 +3,7 @@ var twitch_channel_name = ""
 var streamlabs_token = ""
 var streamelements_token = ""
 var streamloots_token = ""
-var donationAlertsToken = ""
+var donationAlertsToken = "bZM80Ng0dcqRFy6bdQ0R"
 
 // Initial Counter Config
 var initialHours = 5
@@ -16,8 +16,10 @@ var canIncreaseTimeAfterStop = false;
 var isGreenBackground = true;
 
 // Counter controls (in seconds)
-var timeIncrease = 10 * 60 // 10 min
-var timeDecrease = 10 * 60 // 10 min
+var timeIncrease = 60 * 60 // 60 min
+var timeDecrease = 60 * 60 // 60 min
+
+var timeMinuteIncDec = 60 // 60 sec
 
 // Donation alerts
 // This value will be multiplied by donation amount

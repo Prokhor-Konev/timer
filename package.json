@@ -1,7 +1,7 @@
 {
   "name": "donathon-countdown",
   "version": "1.0.0",
-  "description": "<h1 align=\"center\">Twitch Subathon Countdown Template</h1> <p align=\"center\">This is the template I created for my Twitch Subathon Countdowns</p> <br/>",
+  "description": "",
   "main": "renderer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kozjar/twitch-subathon-countdown.git"
+    "url": "git+https://github.com/Prokhor-Konev/timer"
   },
   "author": "Kozjar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Kozjar/twitch-subathon-countdown"
+    "url": "https://github.com/Prokhor-Konev/timer"
   },
-  "homepage": "https://github.com/Kozjar/twitch-subathon-countdown",
+  "homepage": "https://github.com/Prokhor-Konev/timer",
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.63",
     "@electron-forge/maker-deb": "^6.0.0-beta.63",
